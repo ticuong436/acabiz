@@ -1,90 +1,165 @@
-<div class="">
-  <div class="bg-[#872455] px-10">
+<div class="fixed top-0 left-0 w-full z-10">
+  <div class="bg-[#872455] md:px-10 px-3">
     <div class="flex justify-between items-center relative">
       <div class="flex items-center">
         <img
           src="https://acabiz.vn/backend/images/logo_company/1657276229.png"
           alt=""
-          class="h-16 py-2"
+          class="h-16 my-2"
         />
       </div>
-      <div class="">
+      <div class="hidden md:block">
         <ul class="flex items-center">
           <li
-            class="flex items-center justify-center flex-col mx-2 text-white whitespace-nowrap"
+            class="flex items-center justify-center flex-col mx-2 text-white whitespace-nowrap py-4 px-2 cursor-pointer hover:bg-orange-400"
           >
-            <span class="material-icons"> person </span>
-            <p class="mb-0">Học viên</p>
+            <a class="mb-0 flex flex-col items-center" href="#">
+              <span class="material-icons"> person </span>
+              Học viên</a
+            >
           </li>
           <li
-            class="flex items-center justify-center flex-col mx-2 text-white whitespace-nowrap"
+            class="flex items-center justify-center flex-col mx-2 text-white whitespace-nowrap py-4 px-2 cursor-pointer hover:bg-orange-400"
           >
-            <span class="material-icons"> groups </span>
-            <p class="mb-0">Nhóm</p>
+            <a class="mb-0 flex flex-col items-center" href="#">
+              <span class="material-icons"> groups </span>
+              Nhóm</a
+            >
           </li>
           <li
-            class="flex items-center justify-center flex-col mx-2 text-white whitespace-nowrap"
+            class="flex items-center justify-center flex-col mx-2 text-white whitespace-nowrap py-4 px-2 cursor-pointer hover:bg-orange-400 relative menu-group"
           >
-            <span class="material-icons"> menu_book </span>
-            <p class="mb-0">Khóa học</p>
+            <a class="mb-0 flex flex-col items-center">
+              <span class="material-icons"> menu_book </span>
+              <div class="flex items-center">
+                Khóa học <span class="material-icons ml-2"> expand_more </span>
+              </div>
+            </a>
+            <div
+              class="absolute right-0 bg-white menu-list border rounded border-gray-400"
+            >
+              <ul class="py-3 text-black">
+                <li class="px-3 py-1 text-sm hover:bg-[#F7F7F7]">
+                  Thư viện tải lên
+                </li>
+                <li class="px-3 py-1 text-sm hover:bg-[#F7F7F7]">
+                  Khóa học mở rộng
+                </li>
+                <li class="px-3 py-1 text-sm hover:bg-[#F7F7F7]">
+                  Khóa học công ty
+                </li>
+                <li class="px-3 py-1 text-sm hover:bg-[#F7F7F7]">
+                  Lộ trình học
+                </li>
+                <li class="px-3 py-1 text-sm hover:bg-[#F7F7F7]">
+                  Đăng ký khóa học
+                </li>
+              </ul>
+            </div>
           </li>
           <li
-            class="flex items-center justify-center flex-col mx-2 text-white whitespace-nowrap"
+            class="flex items-center justify-center flex-col mx-2 text-white whitespace-nowrap py-4 px-2 cursor-pointer hover:bg-orange-400 relative menu-group"
           >
-            <span class="material-icons"> collections_bookmark </span>
-            <p class="mb-0">Đánh giá</p>
+            <a class="mb-0 flex flex-col items-center">
+              <span class="material-icons"> collections_bookmark </span>
+              <div class="flex items-center justify-between">
+                Đánh giá <span class="material-icons ml-2"> expand_more </span>
+              </div>
+            </a>
+            <div
+              class="absolute right-0 bg-white menu-list border rounded border-gray-400"
+            >
+              <ul class="py-3 text-black">
+                <li class="px-3 py-1 text-sm hover:bg-[#F7F7F7]">
+                  Thư viện câu hỏi
+                </li>
+                <li class="px-3 py-1 text-sm hover:bg-[#F7F7F7]">
+                  Bài trắc nghiệm
+                </li>
+                <li class="px-3 py-1 text-sm hover:bg-[#F7F7F7]">Khảo sát</li>
+                <li class="px-3 py-1 text-sm hover:bg-[#F7F7F7]">
+                  Đánh giá năng lực
+                </li>
+                <li class="px-3 py-1 text-sm hover:bg-[#F7F7F7]">
+                  Chấm điểm bài thi
+                </li>
+              </ul>
+            </div>
           </li>
           <li
-            class="flex items-center justify-center flex-col mx-2 text-white whitespace-nowrap"
+            class="flex items-center justify-center flex-col mx-2 text-white whitespace-nowrap py-4 px-2 cursor-pointer hover:bg-orange-400"
           >
-            <span class="material-icons"> videocam </span>
-            <p class="mb-0">Sự kiện</p>
+            <a class="mb-0 flex flex-col items-center" href="#">
+              <span class="material-icons"> videocam </span>
+              Sự kiện</a
+            >
           </li>
           <li
-            class="flex items-center justify-center flex-col mx-2 text-white whitespace-nowrap"
+            class="flex items-center justify-center flex-col mx-2 text-white whitespace-nowrap py-4 px-2 cursor-pointer hover:bg-orange-400"
           >
-            <span class="material-icons"> chat </span>
-            <p class="mb-0">Thảo luận</p>
+            <a class="mb-0 flex flex-col items-center" href="#">
+              <span class="material-icons"> chat </span>
+              Thảo luận</a
+            >
           </li>
           <li
-            class="flex items-center justify-center flex-col mx-2 text-white whitespace-nowrap"
+            class="flex items-center justify-center flex-col mx-2 text-white whitespace-nowrap py-4 px-2 cursor-pointer hover:bg-orange-400"
           >
-            <span class="material-icons"> analytics </span>
-            <p class="mb-0">Báo cáo</p>
+            <a class="mb-0 flex flex-col items-center" href="#">
+              <span class="material-icons"> analytics </span>
+              Báo cáo</a
+            >
           </li>
           <li
-            class="flex items-center justify-center flex-col mx-2 text-white whitespace-nowrap"
+            class="flex items-center justify-center flex-col mx-2 text-white whitespace-nowrap py-4 px-2 cursor-pointer hover:bg-orange-400"
           >
-            <span class="material-icons"> settings </span>
-            <p class="mb-0">Cài đặt</p>
+            <a class="mb-0 flex flex-col items-center" href="#">
+              <span class="material-icons"> settings </span>
+              Cài đặt</a
+            >
           </li>
         </ul>
       </div>
-      <div class="flex items-center">
-        <div
-          class="h-12 w-12 rounded-full bg-gray-500 my-2 relative overflow-hidden"
-        >
-          <span
-            class="material-icons text-white absolute bottom-[-10px] left-1/2 centerX-img"
-            style="font-size: 60px"
+      <div class="items-center hidden md:flex">
+        <div class="hover:bg-orange-400 flex items-center h-full py-4 relative menu-group">
+          <div
+            class="h-12 w-12 rounded-full bg-gray-500 relative overflow-hidden"
           >
-            person
-          </span>
-        </div>
-        <div class="flex items-center ml-2">
-          <p class="text-white">Anh Khương</p>
-          <span class="material-icons text-white"> keyboard_arrow_down </span>
+            <span
+              class="material-icons text-white absolute bottom-[-10px] left-1/2 centerX-img"
+              style="font-size: 60px"
+            >
+              person
+            </span>
+          </div>
+          <div class="flex items-center ml-2">
+            <p class="text-white">Anh Khương</p>
+            <span class="material-icons text-white"> keyboard_arrow_down </span>
+          </div>
+          <div
+              class="absolute right-0 bg-white menu-list border rounded border-gray-400 w-full"
+            >
+              <ul class="py-3 text-black w-full">
+                <li class="px-3 py-1 text-sm hover:bg-[#F7F7F7]">
+                  <a href="#">Đăng xuất</a>
+                </li>
+                
+              </ul>
+            </div>
         </div>
         <span
-          class="material-icons text-white ml-5 mr-3"
+          class="material-icons text-white ml-5 mr-3 px-4 py-6 cursor-pointer hover:bg-orange-400"
           style="font-size: 30px"
         >
           notifications
         </span>
         <div
-          class="border border-white rounded px-5 py-2 flex items-center text-white"
+          class="border border-white rounded px-5 py-2 flex items-center text-white hover:bg-gray-800 cursor-pointer"
         >
-         <p> Học viên</p>
+          <p>Học viên</p>
+          <span class="material-icons ml-1">
+            arrow_forward
+            </span>
         </div>
       </div>
     </div>
