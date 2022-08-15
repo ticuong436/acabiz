@@ -1,1 +1,97 @@
-<p>trangchu-cachoatdongganday works!</p>
+<div class="flex w-full">
+  <div class="w-3/4">
+    <canvas
+    class="w-full pr-10"
+      baseChart
+      height="400"
+      [type]="'line'"
+      [data]="lineChartData"
+      [options]="lineChartOptions"
+      [legend]="lineChartLegend"
+    >
+    </canvas>
+  </div>
+  <div class="w-1/4 pt-5">
+    <div>
+      <div class="flex relative pb-1 w-full items-center">
+        <span class="material-icons mr-3 text-3xl"> groups </span>
+        <p>Lượt tham gia học</p>
+        <div class="absolute w-full bg-gray-400 h-px bottom-0"></div>
+      </div>
+      <div class="flex">
+        <div class="flex items-end mr-5">
+          <div class="">
+            <span class="text-2xl mr-1 leading-0 font-medium">1</span>
+            <span class="text-sm mr-1">Hôm nay</span>
+          </div>
+          <span class="material-icons text-green-500 my-auto">
+            arrow_upward
+          </span>
+        </div>
+        <div class="flex items-end">
+          <div class="">
+            <span class="text-2xl mr-1 leading-0 font-medium">4</span>
+            <span class="text-sm mr-1">Tháng 08</span>
+          </div>
+          <span class="material-icons text-green-500 my-auto">
+            arrow_upward
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="pt-5">
+        <div class="flex relative pb-1 w-full items-center">
+          <span class="material-icons mr-3 text-3xl"> smart_display </span>
+          <p>Số video hoàn thành</p>
+          <div class="absolute w-full bg-gray-400 h-px bottom-0"></div>
+        </div>
+        <div class="flex">
+          <div class="flex items-end mr-5">
+            <div class="">
+              <span class="text-2xl mr-1 leading-0 font-medium">0</span>
+              <span class="text-sm mr-1">Hôm nay</span>
+            </div>
+            <span class="material-icons text-green-500 my-auto">
+              arrow_upward
+            </span>
+          </div>
+          <div class="flex items-end">
+            <div class="">
+              <span class="text-2xl mr-1 leading-0 font-medium">56</span>
+              <span class="text-sm mr-1">Tháng 08</span>
+            </div>
+            <span class="material-icons text-green-500 my-auto">
+              arrow_upward
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="pt-5">
+        <div class="flex relative pb-1 w-full items-center">
+          <span class="material-icons mr-3 text-3xl">schedule</span>
+          <p>Số giờ xem video</p>
+          <div class="absolute w-full bg-gray-400 h-px bottom-0"></div>
+        </div>
+        <div class="flex ">
+          <div class="flex items-end mr-5">
+            <div class="">
+              <span class="text-2xl mr-1 leading-0 font-medium">0</span>
+              <span class="text-sm mr-1">Hôm nay</span>
+            </div>
+            <span class="material-icons text-green-500 my-auto">
+              arrow_upward
+            </span>
+          </div>
+          <div class="flex items-end">
+            <div class="">
+              <span class="text-2xl mr-1 leading-0 font-medium">8</span>
+              <span class="text-sm mr-1">Tháng 08</span>
+            </div>
+            <span class="material-icons text-green-500 my-auto">
+              arrow_upward
+            </span>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

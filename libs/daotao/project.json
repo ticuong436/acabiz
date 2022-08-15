@@ -55,10 +55,6 @@
         "outputDir": "dist/storybook/daotao",
         "configDir": "libs/daotao/.storybook",
         
-        "styles": ["libs/ui2/src/styles.scss",
-        "../../../node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
-      ],
-
         "browserTarget": "daotao:build-storybook",
         "compodoc": false
       },

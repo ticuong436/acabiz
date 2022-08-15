@@ -12,30 +12,6 @@
       <div class="">
         <h3 class="text-xl font-medium pb-5">Thống kê tổng quan</h3>
         <div class="grid grid-cols-4 gap-10">
-          <div class="border rounded p-5">
-            <div class="flex">
-              <div class="w-full">
-                <h3 class="">Khóa được học</h3>
-                <span class="text-xs">Học viên đã tham gia</span>
-              </div>
-              <span class="material-icons" style="font-size: 50px">
-                menu_book
-              </span>
-            </div>
-            <p>
-              <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
-            </p>
-            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-            <div class="flex justify-between">
-              <p>144 Khóa</p>
-              <p>84.03%</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="pt-10">
-        <h3 class="text-xl font-medium pb-5">Thống kê tương tác</h3>
-        <div class="grid grid-cols-4 gap-10">
           <myorg-trangchu-thongketongquan
             *ngFor="let item of option"
             [backgroundColor]="item.backgroundColor"
@@ -48,6 +24,119 @@
           ></myorg-trangchu-thongketongquan>
         </div>
       </div>
+      <div class="pt-10">
+        <h3 class="text-xl font-medium pb-5">Thống kê tương tác</h3>
+        <div class="grid grid-cols-4 gap-10">
+          <div class="border rounded p-5">
+            <div class="flex">
+              <div class="w-full">
+                <h3 class="">Khóa được học</h3>
+                <span class="text-xs">Học viên đã tham gia</span>
+              </div>
+              <span
+                class="material-icons text-[#8590D0]"
+                style="font-size: 40px"
+              >
+                menu_book
+              </span>
+            </div>
+
+            <mat-progress-bar
+              mode="determinate"
+              class="my-3 item-1"
+              value="40"
+            ></mat-progress-bar>
+            <div class="flex justify-between">
+              <p>144 Khóa</p>
+              <p>84.03%</p>
+            </div>
+          </div>
+          <div class="border rounded p-5">
+            <div class="flex">
+              <div class="w-full">
+                <h3 class="">Video hoàn thành</h3>
+                <span class="text-xs">Video học viên đã hoàn thành</span>
+              </div>
+              <span
+                class="material-icons text-[#F37E7C]"
+                style="font-size: 40px"
+              >
+                video_camera_front
+              </span>
+            </div>
+
+            <mat-progress-bar
+              mode="determinate"
+              class="my-3 item-2"
+              value="40"
+            ></mat-progress-bar>
+            <div class="flex justify-between">
+              <p>333 video</p>
+              <p>1.67%</p>
+            </div>
+          </div>
+          <div class="border rounded p-5">
+            <div class="flex">
+              <div class="w-full">
+                <h3 class="">Giờ tham gia học</h3>
+                <span class="text-xs">Tổng số giờ học của học viên</span>
+              </div>
+              <span
+                class="material-icons text-[#5FC8F8]"
+                style="font-size: 40px"
+              >
+                watch
+              </span>
+            </div>
+
+            <mat-progress-bar
+              mode="determinate"
+              class="my-3 item-3"
+              value="40"
+            ></mat-progress-bar>
+            <div class="flex justify-between">
+              <p>39 giờ</p>
+              <span
+                >1.51
+                <span class="text-xs">giờ trung bình/học viên</span>
+              </span>
+            </div>
+          </div>
+          <div class="border rounded p-5">
+            <div class="flex">
+              <div class="w-full">
+                <h3 class="">Khóa được học</h3>
+                <span class="text-xs">Học viên đã tham gia</span>
+              </div>
+              <span
+                class="material-icons text-[#90CE93]"
+                style="font-size: 40px"
+              >
+                help_outline
+              </span>
+            </div>
+
+            <mat-progress-bar
+              mode="determinate"
+              class="my-3 item-4"
+              value="40"
+            ></mat-progress-bar>
+            <div class="flex justify-between">
+              <p>144 Khóa</p>
+              <p>84.03%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-10">
+        <h3 class="text-xl font-medium pb-5">Các hoạt động gần đây</h3>
+        <myorg-trangchu-cachoatdongganday></myorg-trangchu-cachoatdongganday>
+      </div>
+      <div class="pt-10">
+        <h3 class="text-xl font-medium pb-5">Bảng xếp hạng (90 ngày gần đây)</h3>
+        <myorg-trangchu-bangxephang></myorg-trangchu-bangxephang>
+      </div>
     </div>
+    
   </div>
 </div>

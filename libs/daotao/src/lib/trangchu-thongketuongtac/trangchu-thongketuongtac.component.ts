@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'myorg-trangchu-thongketuongtac',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrangchuThongketuongtacComponent implements OnInit {
   constructor() {}
-
+  @Input() title!:string;
+  @Input() des!:string
   ngOnInit(): void {}
 }

@@ -17,6 +17,7 @@
     "paths": {
       "@my-org/my-lib": ["libs/my-lib/src/index.ts"],
       "@myorg/daotao": ["libs/daotao/src/index.ts"],
+      "@myorg/daotao1": ["libs/daotao1/src/index.ts"],
       "@myorg/data": ["libs/data/src/index.ts"],
       "@myorg/header": ["libs/header/src/index.ts"],
       "@myorg/products": ["libs/products/src/index.ts"],

@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
     TodosComponent,
     TodolistComponent,
     FooterComponent,
+    
   ],
 })
 export class Ui2Module {}

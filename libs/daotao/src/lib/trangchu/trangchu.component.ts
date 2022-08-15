@@ -1,9 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'myorg-trangchu',
   templateUrl: './trangchu.component.html',
   styleUrls: ['./trangchu.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TrangchuComponent implements OnInit {
  
