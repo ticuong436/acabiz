@@ -1,0 +1,73 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/daotao/src",
+  "prefix": "myorg",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/daotao"],
+      "options": {
+        "project": "libs/daotao/ng-package.json",
+        "tailwindConfig": "libs/daotao/tailwind.config.js"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/daotao/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/daotao/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/daotao"],
+      "options": {
+        "jestConfig": "libs/daotao/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/daotao/**/*.ts", "libs/daotao/**/*.html"]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "libs/daotao/.storybook",
+        "browserTarget": "daotao:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/daotao",
+        "configDir": "libs/daotao/.storybook",
+        
+        "styles": ["libs/ui2/src/styles.scss",
+        "../../../node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+      ],
+
+        "browserTarget": "daotao:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  },
+  "tags": []
+}

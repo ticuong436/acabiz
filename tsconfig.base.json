@@ -14,7 +14,16 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@my-org/my-lib": ["libs/my-lib/src/index.ts"],
+      "@myorg/daotao": ["libs/daotao/src/index.ts"],
+      "@myorg/data": ["libs/data/src/index.ts"],
+      "@myorg/header": ["libs/header/src/index.ts"],
+      "@myorg/products": ["libs/products/src/index.ts"],
+      "@myorg/todolist": ["libs/todolist/src/index.ts"],
+      "@myorg/ui": ["libs/ui/src/index.ts"],
+      "@myorg/ui2": ["libs/ui2/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

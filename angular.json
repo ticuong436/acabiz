@@ -2,7 +2,21 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "api": "apps/api",
+    "daotao": "libs/daotao",
+    "daotao-e2e": "apps/daotao-e2e",
+    "data": "libs/data",
+    "header": "libs/header",
+    "header-e2e": "apps/header-e2e",
+    "my-lib": "libs/my-lib",
+    "my-lib-e2e": "apps/my-lib-e2e",
+    "products": "libs/products",
+    "todolist": "libs/todolist",
     "todos": "apps/todos",
-    "todos-e2e": "apps/todos-e2e"
+    "todos-e2e": "apps/todos-e2e",
+    "ui": "libs/ui",
+    "ui-e2e": "apps/ui-e2e",
+    "ui2": "libs/ui2",
+    "ui2-e2e": "apps/ui2-e2e"
   }
 }

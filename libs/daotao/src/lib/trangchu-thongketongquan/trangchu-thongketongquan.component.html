@@ -1,0 +1,17 @@
+<!-- eslint-disable @angular-eslint/template/eqeqeq -->
+<div
+  class="p-5 flex  text-red-500 items-center border rounded {{ flex }}"
+  [ngStyle]="{ backgroundColor: backgroundColor }"
+>
+  <div class="w-full {{flex == 'flex-row-reverse' ? 'text-right': ''}}" [ngStyle]="{ color: textcolor }">
+    <h3 class="text-2xl ">{{ total }}</h3>
+    <span class="text-xs uppercase">{{ text }}</span>
+  </div>
+  <span
+    class="material-icons"
+    style="font-size: 50px"
+    [ngStyle]="{ color: iconColor }"
+  >
+    {{ icon }}
+  </span>
+</div>

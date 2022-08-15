@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/todos",
         "index": "apps/todos/src/index.html",
@@ -13,8 +15,14 @@
         "polyfills": "apps/todos/src/polyfills.ts",
         "tsConfig": "apps/todos/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/todos/src/favicon.ico", "apps/todos/src/assets"],
-        "styles": ["apps/todos/src/styles.scss"],
+        "assets": [
+          "apps/todos/src/favicon.ico",
+          "apps/todos/src/assets"
+        ],
+        "styles": [
+          "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+          "apps/todos/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -60,7 +68,10 @@
           "browserTarget": "todos:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/todos/proxy.conf.json"
+      }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
@@ -71,12 +82,17 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/todos/**/*.ts", "apps/todos/**/*.html"]
+        "lintFilePatterns": [
+          "apps/todos/**/*.ts",
+          "apps/todos/**/*.html"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/todos"],
+      "outputs": [
+        "coverage/apps/todos"
+      ],
       "options": {
         "jestConfig": "apps/todos/jest.config.ts",
         "passWithNoTests": true

@@ -1,0 +1,77 @@
+<div class="flex flex-col justify-center items-center">
+  <form class="w-1/2 " [formGroup]="todoForm">
+    <div class="mb-6">
+      <label
+        f
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+        >Name</label
+      >
+      <input
+        [formControlName]="'name'"
+        type="text"
+        id="email"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="name@flowbite.com"
+        required=""
+      />
+    </div>
+    <div class="mb-6">
+      <label
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+        >Description</label
+      >
+      <input
+        [formControlName]="'description'"
+        type="text"
+        id="password"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        required=""
+      />
+    </div>
+  
+    <button
+      (click)="postTodolist()"
+      type="submit"
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    >
+      Submit
+    </button>
+    <button
+      (click)="updateTodolist()"
+      type="submit"
+      class="text-white bg-green-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ml-5"
+    >
+      Update
+    </button>
+  </form>
+  
+  <div class="flex justify-center flex-col mt-10">
+    <div class="grid grid-cols-3 gap-10">
+      <div
+        class="max-w-sm rounded overflow-hidden shadow-lg"
+        *ngFor="let item of TodoList"
+        (click)="selectItem(item)"
+      >
+       <div class="bg-red-200 w-full h-40 rounded-xl">
+
+       </div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">{{ item.name }}</div>
+          <p class="text-gray-700 text-base">
+            {{ item.description }}
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span
+            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+            >#{{ item.id }}</span
+          >
+        </div>
+        <button class="border border-black" (click)="removeItem(item)">
+          remove
+        </button>
+      </div>
+    </div>
+  </div>
+  
+</div>

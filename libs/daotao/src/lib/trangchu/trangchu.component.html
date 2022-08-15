@@ -1,0 +1,53 @@
+<div class="">
+  <div class="px-10 py-5 relative">
+    <h3 class="uppercase text-2xl">HỆ THỐNG GIÁO DỤC VÀ ĐÀO TẠO TRỰC TUYẾN</h3>
+    <span class="text-sm text-gray-400"
+      >Các số liệu thống kê tổng quan, thống kê tương tác, bảng xếp hạng cá
+      nhân, biểu đồ tương tác của học viên</span
+    >
+    <div class="absolute bottom-0 left-0 w-full h-px bg-gray-400"></div>
+  </div>
+  <div class="py-10">
+    <div class="lg:max-w-7xl mx-auto relative">
+      <div class="">
+        <h3 class="text-xl font-medium pb-5">Thống kê tổng quan</h3>
+        <div class="grid grid-cols-4 gap-10">
+          <div class="border rounded p-5">
+            <div class="flex">
+              <div class="w-full">
+                <h3 class="">Khóa được học</h3>
+                <span class="text-xs">Học viên đã tham gia</span>
+              </div>
+              <span class="material-icons" style="font-size: 50px">
+                menu_book
+              </span>
+            </div>
+            <p>
+              <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
+            </p>
+            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+            <div class="flex justify-between">
+              <p>144 Khóa</p>
+              <p>84.03%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-10">
+        <h3 class="text-xl font-medium pb-5">Thống kê tương tác</h3>
+        <div class="grid grid-cols-4 gap-10">
+          <myorg-trangchu-thongketongquan
+            *ngFor="let item of option"
+            [backgroundColor]="item.backgroundColor"
+            [text]="item.text"
+            [textcolor]="item.textcolor"
+            [icon]="item.icon"
+            [iconColor]="item.iconColor"
+            [total]="item.total"
+            [flex]="item.flex"
+          ></myorg-trangchu-thongketongquan>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
