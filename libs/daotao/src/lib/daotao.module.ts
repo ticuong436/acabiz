@@ -18,16 +18,19 @@ import { NgxFileDropModule } from 'ngx-file-drop';
 import { RouterModule, Routes } from '@angular/router';
 import { ThuvientailenScormComponent } from './khoahoc/thuvientailen-scorm/thuvientailen-scorm.component';
 import { ThuvientailenThungracComponent } from './khoahoc/thuvientailen-thungrac/thuvientailen-thungrac.component';
+import { HocvienComponent } from './hocvien/hocvien.component';
 
 const pageRoute: Routes = [
   { path: '', component: TrangchuComponent },
+  { path: 'hocvien', component: HocvienComponent },
+
   {
     path: 'tailieunguon',
     component: ThuvientailenComponent,
   },
   { path: 'tailieunguon/taomoi', component: ThuvientailenTaomoiComponent },
   { path: 'tailieunguon/scorm', component: ThuvientailenScormComponent },
-  {path: 'tailieunguon/thungrac', component: ThuvientailenThungracComponent}
+  { path: 'tailieunguon/thungrac', component: ThuvientailenThungracComponent },
 ];
 @NgModule({
   imports: [
@@ -52,6 +55,7 @@ const pageRoute: Routes = [
     ThuvientailenTaomoiComponent,
     ThuvientailenScormComponent,
     ThuvientailenThungracComponent,
+    HocvienComponent,
   ],
   exports: [
     MainComponent,

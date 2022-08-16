@@ -1,0 +1,23 @@
+.menu-group{
+
+    .menu-list{
+        opacity: 0;
+        top: 100%;
+        pointer-events: none;
+
+    }
+}
+.menu-group:hover{
+    .menu-list{
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+.mat-cell{
+    padding: 10px 10px 10px 0 !important;
+}
+table{
+    .mat-row:nth-child(odd){
+        background-color: #F7F7F7;
+    }
+}

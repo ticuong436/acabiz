@@ -1,0 +1,248 @@
+<div class="overflow-hidden mt-20 z-0">
+  <div class="md:px-10 px-5 py-5 relative">
+    <div class="md:flex items-center justify-between">
+      <div>
+        <h3 class="uppercase md:text-2xl">Học viên</h3>
+        <span class="text-sm text-gray-400"
+          >Quản lý thông tin cơ bản, phân quyền, trường tùy chỉnh, nhóm, năng
+          lực của học viên</span
+        >
+      </div>
+      <div class="md:flex flex-row md:space-x-8 items-center">
+        <div class="flex items-center md:py-0 py-5">
+          <div
+            class="flex items-center flex-col justify-center rounded-full px-2 py-1 border border-blue-300"
+          >
+            <span class="material-icons text-2xl text-blue-300"> group </span>
+          </div>
+          <div class="ml-3">
+            <p class="text-center font-medium text-xl leading-3">28</p>
+            <span class="text-sm">Tổng học viên </span>
+          </div>
+        </div>
+        <div class="flex items-center md:py-0 py-5">
+          <div
+            class="flex items-center flex-col justify-center rounded-full px-2 py-1 border border-green-500"
+          >
+            <span class="material-icons text-2xl text-green-500">
+              person_add
+            </span>
+          </div>
+          <div class="ml-3">
+            <p class="text-center font-medium text-xl leading-3">25</p>
+            <span class="text-sm">Đang hoạt động </span>
+          </div>
+        </div>
+        <div class="flex items-center md:py-0 py-5">
+          <div
+            class="flex items-center flex-col justify-center rounded-full px-2 py-1 border border-red-500"
+          >
+            <span class="material-icons text-2xl text-red-500">
+              person_remove
+            </span>
+          </div>
+          <div class="ml-3">
+            <p class="text-center font-medium text-xl leading-3">3</p>
+            <span class="text-sm">Đã nghỉ việc </span>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center text-white bg-red-500 px-3 py-1 rounded">
+        <span class="material-icons text-sm mr-2">
+            local_mall
+            </span>
+        <span>Hệ thống chức danh</span>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 w-full h-px bg-gray-400"></div>
+  </div>
+  <div class="py-10">
+    <div class="lg:max-w-7xl mx-auto relative md:px-0 px-3">
+      <div>
+        <p class="text-lg font-medium">Tìm kiếm</p>
+        <div class="flex space-x-4 py-5">
+          <input
+            class="px-2 py-1 border border-gray-200 rounded-lg w-full"
+            type="text"
+            placeholder="Tìm theo tên tải lên"
+          />
+        </div>
+      </div>
+      <div class="pt-5">
+        <div class="flex justify-between items-center">
+          <p class="md:text-lg font-medium whitespace-nowrap">Danh sách</p>
+          <div
+            class="flex items-center flex-wrap md:space-x-2 whitespace-nowrap"
+          >
+            <div
+              class="flex items-center px-3 py-1 m-1 md:m-0 bg-green-500 text-white whitespace-nowrap justify-center rounded-lg"
+            >
+              <span class="material-icons"> add </span>
+              <a routerLink="taomoi">Tạo mới</a>
+            </div>
+            <div
+              class="flex relative items-center px-3 cursor-pointer menu-group py-1 m-1 md:m-0 bg-[#7E57C2] text-white whitespace-nowrap justify-center rounded-lg"
+            >
+              <span class="material-icons"> ballot </span>
+              <a class="mx-1">Nhập & xuất dữ liệu</a>
+              <span class="material-icons"> expand_more </span>
+              <div class="absolute w-full menu-list">
+                <ul class="bg-white z-10 rounded border border-gray-200">
+                  <li class="px-3 py-1 text-black hover:bg-gray-200 flex items-center">
+                    <span class="material-icons"> file_upload </span>
+                    Nhập dữ liệu từ Excel
+                  </li>
+                  <li class="px-3 py-1 text-black hover:bg-gray-200 flex items-center">
+                    <span class="material-icons"> download </span>
+                    Chiết xuất dữ liệu
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center px-3 cursor-pointer py-1 m-1 md:m-0 bg-blue-500 text-white whitespace-nowrap justify-center rounded-lg"
+            >
+              <span class="material-icons"> settings </span>
+              <span>Thiết lập</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="overflow-auto" *ngIf="!gallery">
+          <table
+            mat-table
+            [dataSource]="dataSource"
+            class="mat-elevation-z8 w-[1250px] md:w-full my-2"
+          >
+            <!-- Checkbox Column -->
+            <ng-container matColumnDef="select">
+              <th mat-header-cell *matHeaderCellDef>
+                <mat-checkbox
+                  (change)="$event ? toggleAllRows() : null"
+                  [checked]="selection.hasValue() && isAllSelected()"
+                  [indeterminate]="selection.hasValue() && !isAllSelected()"
+                  [aria-label]="checkboxLabel()"
+                >
+                </mat-checkbox>
+              </th>
+              <td mat-cell *matCellDef="let row">
+                <mat-checkbox
+                  (click)="$event.stopPropagation()"
+                  (change)="$event ? selection.toggle(row) : null"
+                  [checked]="selection.isSelected(row)"
+                  [aria-label]="checkboxLabel(row)"
+                >
+                </mat-checkbox>
+              </td>
+            </ng-container>
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="STT">
+              <th mat-header-cell *matHeaderCellDef>STT</th>
+              <td mat-cell *matCellDef="let element">{{ element.STT }}</td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="image">
+              <th mat-header-cell *matHeaderCellDef>Ảnh</th>
+              <td mat-cell *matCellDef="let element">
+                <img src="{{ element.image }}" class="w-10 h-10" alt="" />
+              </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="Hoten" class="w-full">
+              <th mat-header-cell *matHeaderCellDef>Họ và tên</th>
+              <td mat-cell *matCellDef="let element">
+                <div class="flex flex-col">
+                    <a
+                    class="text-blue-500 font-medium hover:text-blue-700 cursor-pointer mb-1"
+                  >
+                    {{ element.Hoten }}
+                  </a>
+                  <div>
+                    <span class="material-icons mr-1 text-xs">
+                        phone
+                        </span>
+                  <span class="text-xs">{{element.sdt}}</span>
+
+                  </div>
+                </div>
+              </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="email">
+              <th mat-header-cell *matHeaderCellDef>Email</th>
+              <td mat-cell *matCellDef="let element">
+               
+                  {{ element.email }}
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="rule">
+              <th mat-header-cell *matHeaderCellDef>Vai trò</th>
+              <td mat-cell *matCellDef="let element">
+                <span class="text-white px-2 py-1 bg-black rounded ">
+                  {{ element.rule }}
+                </span>
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="group">
+              <th mat-header-cell *matHeaderCellDef>Nhóm</th>
+              <td mat-cell *matCellDef="let element">
+                <span class="bg-yellow-400 text-sm px-2 py-1 rounded">{{ element.group }}</span>
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="tinhtrang">
+                <th mat-header-cell *matHeaderCellDef>Tình trạng</th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="text-sm bg-green-500 px-2 py-1 rounded text-white">{{ element.tinhtrang }}</span>
+                </td>
+              </ng-container>
+            <ng-container matColumnDef="ngaytao">
+              <th mat-header-cell *matHeaderCellDef>Ngày tạo</th>
+              <td mat-cell *matCellDef="let element">{{ element.ngaytao }}</td>
+            </ng-container>
+            <ng-container matColumnDef="action">
+              <th mat-header-cell *matHeaderCellDef>Thao tác</th>
+              <td mat-cell *matCellDef="let element">
+                <div class="flex items-center space-x-1 whitespace-normal">
+                    <div
+                    class="text-center px-3 py-1 text-white bg-[#17A2B8] text-sm rounded-lg"
+                  >
+                    Phân quyền
+                  </div>
+                  <div
+                    class="text-center px-3 py-1 text-white bg-blue-500 text-sm rounded-lg"
+                  >
+                    Cập nhật
+                  </div>
+                  <div
+                    class="text-center px-3 py-1 text-white bg-red-500 text-sm rounded-lg"
+                  >
+                    Xóa
+                  </div>
+                </div>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr
+              mat-row
+              *matRowDef="let row; columns: displayedColumns"
+              (click)="selection.toggle(row)"
+            ></tr>
+          </table>
+          <mat-paginator
+            [pageSizeOptions]="[10, 20]"
+            showFirstLastButtons
+            aria-label="Select page of periodic elements"
+          >
+          </mat-paginator>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+</div>
