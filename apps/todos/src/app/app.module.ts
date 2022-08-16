@@ -3,8 +3,17 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import {DaotaoModule} from '@myorg/daotao'
+import { DaotaoModule } from '@myorg/daotao';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Route, RouterModule, Routes } from '@angular/router';
+
+const pageRoute: Routes = [
+  {
+    path: '',
+    component: AppComponent,
+    loadChildren: () => import('@myorg/daotao').then((m) => m.DaotaoModule),
+  },
+];
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -13,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    DaotaoModule
+    DaotaoModule,
+    RouterModule.forRoot(pageRoute),
   ],
   providers: [],
   bootstrap: [AppComponent],

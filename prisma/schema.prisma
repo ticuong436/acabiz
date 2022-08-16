@@ -24,3 +24,13 @@ model Todo {
   name        String
   description String
 }
+
+model Tailieunguon {
+  id String @id @default(cuid())
+  kieufile  String
+  tieude    String
+  Dungluong String
+  Tinhtrang String
+  nguoitao  String
+  ngaytao   String
+}

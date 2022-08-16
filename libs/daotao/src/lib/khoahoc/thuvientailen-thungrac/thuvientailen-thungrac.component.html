@@ -1,0 +1,141 @@
+<div class="overflow-hidden mt-20 z-0">
+    <div class="md:px-10 px-5 py-5 relative">
+      <div class="md:flex items-center justify-between">
+        <div>
+          <h3 class="uppercase md:text-2xl">Thư viện tải lên</h3>
+          <span class="text-sm text-gray-400"
+            >Danh sách các file tài liệu, file ảnh, video, link tài liệu của công
+            ty</span
+          >
+        </div>
+        <div class="md:flex flex-row md:space-x-8 items-center">
+          <div class="flex items-center md:py-0 py-5">
+            <div
+              class="flex items-center flex-col justify-center rounded-full px-2 py-1 border border-blue-300"
+            >
+              <span class="material-icons text-2xl text-blue-300"> style </span>
+            </div>
+            <div class="ml-3">
+              <p class="text-center font-medium text-xl leading-3">16</p>
+              <span class="text-xs">Tài liệu</span>
+            </div>
+          </div>
+  
+          <div>
+            <div class="flex items-center">
+              <span class="material-icons leading-5"> list </span>
+              <span class="text-sm leading-5">Bộ nhớ </span>
+            </div>
+            <div class="w-72 px-2 my-2 bg-gray-200 rounded-lg">
+              <span>0%</span>
+            </div>
+            <div class="text-sm">
+              <span
+                >Đã sử dụng <strong>50</strong> trong tổng số
+                <strong>50GB</strong></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 w-full h-px bg-gray-400"></div>
+    </div>
+    <div class="py-10">
+      <div class="lg:max-w-7xl mx-auto relative md:px-0 px-3">
+        <div>
+          <p class="text-lg font-medium">Tìm kiếm</p>
+          <div class="flex space-x-4 py-5">
+            <mat-select
+              class="border border-gray-200 rounded-lg px-2 py-1"
+              placeholder="Chọn lọc theo ..."
+            >
+              <mat-option>Chọn lọc theo</mat-option>
+            </mat-select>
+            <input
+              class="px-2 py-1 border border-gray-200 rounded-lg"
+              type="text"
+              placeholder="Tìm theo tên tải lên"
+            />
+            <mat-select
+              class="border border-gray-200 rounded-lg px-2 py-1"
+              placeholder="Tìm theo Tags"
+            >
+              <mat-option>Chọn lọc theo</mat-option>
+            </mat-select>
+            <mat-select
+              class="border border-gray-200 rounded-lg px-2 py-1"
+              placeholder="Tìm kiếm theo kiểu file"
+            >
+              <mat-option>Chọn lọc theo</mat-option>
+            </mat-select>
+            <div
+              class="flex items-center px-3 bg-blue-500 text-white whitespace-nowrap justify-center rounded-lg"
+            >
+              <span class="material-icons"> search </span>
+              <span>Tìm kiếm</span>
+            </div>
+          </div>
+        </div>
+        <div class="pt-5">
+          <div class="flex justify-between items-center">
+            <p class="md:text-lg font-medium whitespace-nowrap">Danh sách</p>
+            <div
+              class="flex items-center flex-wrap md:space-x-2 whitespace-nowrap"
+            >
+              <div
+                class="flex items-center px-3 py-1 m-1 md:m-0 bg-green-500 text-white whitespace-nowrap justify-center rounded-lg"
+              >
+                <span class="material-icons"> add </span>
+                <a routerLink="/tailieunguon/taomoi">Tạo mới</a>
+              </div>
+             
+             
+              <div
+              routerLink="/tailieunguon"
+                class="flex items-center px-3 cursor-pointer py-1 m-1 md:m-0 bg-blue-500 text-white whitespace-nowrap justify-center rounded-lg"
+              >
+                <span class="material-icons"> list </span>
+                <span>Danh sách</span>
+              </div>
+              
+            </div>
+          </div>
+  
+          
+          <div class="grid grid-cols-5 gap-5 my-2">
+            <div class="border border-gray-200 rounded" *ngFor="let item of data">
+              <div class="p-3 flex flex-col justify-between h-64">
+                <img src="{{ item.kieufile }}" class="w-24 mx-auto" alt="" />
+                <span class="text-medium">{{ item.tieude }}</span>
+                <div class="flex flex-col">
+                  <span class="text-sm">{{ item.dungluong }}</span>
+                  <span class="text-sm"
+                    >trạng thái:<span class="ml-2 text-green-500 font-medium">{{
+                      item.tinhtrang
+                    }}</span></span
+                  >
+                </div>
+              </div>
+              <div
+                class="border border-gray-200 bg-gray-200 p-3 space-x-2 flex items-center"
+              >
+                <div class="items-center flex space-x-1 text-xs">
+                  <span class="material-icons text-sm"> person_outline </span>
+                  <span class="whitespace-nowrap">Anh Khương</span>
+                </div>
+                <div class="items-center flex space-x-1 text-xs">
+                  <span class="material-icons text-sm"> person_outline </span>
+                  <span class="whitespace-nowrap">1 tuần trước</span>
+                </div>
+                <span class="material-icons text-sm"> settings </span>
+                <mat-checkbox class=""> </mat-checkbox>
+              </div>
+            </div>
+          </div>
+  
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  

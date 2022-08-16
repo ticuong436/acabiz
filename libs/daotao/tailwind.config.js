@@ -10,7 +10,14 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
-    extend: {},
+    colors : {
+       blue : {
+        500: '#007BFF',
+        200 : '#606EC1',
+       }
+    },
+    extend: {}
+
   },
   plugins: [],
 };

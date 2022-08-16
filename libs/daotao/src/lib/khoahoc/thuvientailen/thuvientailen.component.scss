@@ -1,0 +1,8 @@
+.mat-cell{
+    padding-right: 10px !important;
+}
+table{
+    .mat-row:nth-child(odd){
+        background-color: #F7F7F7;
+    }
+}

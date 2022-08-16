@@ -6,7 +6,7 @@ import { ProductsController, ProductsService } from '@myorg/products'
 import {TodolistController, TodolistService} from '@myorg/todolist'
 @Module({
   imports: [],
-  controllers: [AppController,ProductsController, TodolistController],
+  controllers: [AppController,ProductsController, TodolistController, ],
   providers: [AppService,ProductsService, TodolistService],
 })
 export class AppModule {}

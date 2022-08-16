@@ -54,7 +54,6 @@
       "options": {
         "outputDir": "dist/storybook/daotao",
         "configDir": "libs/daotao/.storybook",
-        
         "browserTarget": "daotao:build-storybook",
         "compodoc": false
       },
